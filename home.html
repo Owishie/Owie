@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Portfolio Website</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet"href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+	<style>
+		.dropbtn {
+		  background-color: #000000;
+		  color: white;
+		  padding: 12px;
+		  font-size: 12px;
+		  border: none;
+		  cursor: pointer;
+		  border-radius: 16px;
+		}
+		
+		.dropdown {
+		  position: relative;
+		  display: inline-block;
+		}
+		
+		.dropdown-content {
+		  display: none;
+		  position: absolute;
+		  background-color: #f9f9f9;
+		  min-width: 160px;
+		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		  z-index: 1;
+		}
+		
+		.dropdown-content a {
+		  color: black;
+		  padding: 12px 16px;
+		  text-decoration: none;
+		  display: block;
+		}
+		
+		.dropdown-content a:hover {background-color: #f1f1f1}
+		
+		.dropdown:hover .dropdown-content {
+		  display: block;
+		}
+		
+		.dropdown:hover .dropbtn {
+		  background-color: #4b63feec;
+		}
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+		</style>
+</head>
+<body>
+	
+	<header>
+		<a href="#" class="logo">Owie        <span>Art</span>ist</a>
+		<ul class="navlist">
+			<li><a href="#home" class="active">Home</a></li>
+			<li><a href="#about">About Me</a></li>
+			<li><a href="#services">Services</a></li>
+			<li><a href="#portfolio">Portfolio</a></li>
+		</ul>
+		<div class="bx bx-menu" id="menu-icon"></div>
+
+		
+	</header>
+
+	
+
+	<section class="home" id="home">
+		<div class="home-img">
+			<img src="main1.jpg" alt="">
+        </div>
+
+		<div class="home-content">
+			<h1>Hi, It's <span>Owie</span></h1>
+			<h3 class="typing-text">I'm a <span></span></h3>
+			<p>Do you have an idea in your mind but are not creative enough to fully visualize it? Let me help you achieve
+				 your objectives
+				 and together let’s create a masterpiece for your
+				 personal or business needs..</p>
+	</section>
+
+	
+	<section class="about" id="about">
+		<div class="about-img">
+			<img src="img/itsme.jpg">
+        </div>
+
+		<div class="about-text">
+			<h2>About <span>Me</span></h2>
+			<h4>Graphic Artist!</h4>
+			<p> Hi, I am Oswald Emilson, or you can call me Owie. Art has always been my passion ever since I was little. Illustrating for more than a decade traditionally and close to 3 years digitally, with experience in 2D animation and 3D modelling softwares. 
+				Also an avid film enthusiast with an extensive knowledge of video editing and directing.  </p>
+				
+		</div>
+	</section>
+
+	<!-----------Services Section-------------->
+	<section class="services" id="services">
+	<div class="main-text">
+		<h2><span>My Services</h2>
+        </div>
+	<div class="services-content">
+		<div class="box">
+			<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-camera-reels" viewBox="0 0 16 16">
+				<path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0M1 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0"/>
+				<path d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm6 8.73V7.27l-3.5 1.555v4.35zM1 8v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1"/>
+				<path d="M9 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6M7 3a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
+			  </svg>
+			<h3>Video Editing/ Filming</h3>
+			<p>Products used: Premiere Pro, and Da Vinci Resolve.</p>
+			
+			<div class="dropdown">
+				<button class="dropbtn">PRICES</button>
+				<div class="dropdown-content">
+				<a href="#">Php 800 - 1,500 - Simple 3 to 5 minutes video edit - Same Day</a>
+				<a href="#">Php 1,500 - 3,500 - Less than 10 minute video edit </a>
+				<a href="#">Php 3,500+ 10 minute video with multiple sequences and complicated shots</a>
+				</div>
+      </div>
+    </div>
+
+		<div class="box">
+			<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-brush" viewBox="0 0 16 16">
+                <path d="M15.825.12a.5.5 0 0 1 .132.584c-1.53 3.43-4.743 8.17-7.095 10.64a6.1 6.1 0 0 1-2.373 1.534c-.018.227-.06.538-.16.868-.201.659-.667 1.479-1.708 1.74a8.1 8.1 0 0 1-3.078.132 4 4 0 0 1-.562-.135 1.4 1.4 0 0 1-.466-.247.7.7 0 0 1-.204-.288.62.62 0 0 1 .004-.443c.095-.245.316-.38.461-.452.394-.197.625-.453.867-.826.095-.144.184-.297.287-.472l.117-.198c.151-.255.326-.54.546-.848.528-.739 1.201-.925 1.746-.896q.19.012.348.048c.062-.172.142-.38.238-.608.261-.619.658-1.419 1.187-2.069 2.176-2.67 6.18-6.206 9.117-8.104a.5.5 0 0 1 .596.04M4.705 11.912a1.2 1.2 0 0 0-.419-.1c-.246-.013-.573.05-.879.479-.197.275-.355.532-.5.777l-.105.177c-.106.181-.213.362-.32.528a3.4 3.4 0 0 1-.76.861c.69.112 1.736.111 2.657-.12.559-.139.843-.569.993-1.06a3 3 0 0 0 .126-.75zm1.44.026c.12-.04.277-.1.458-.183a5.1 5.1 0 0 0 1.535-1.1c1.9-1.996 4.412-5.57 6.052-8.631-2.59 1.927-5.566 4.66-7.302 6.792-.442.543-.795 1.243-1.042 1.826-.121.288-.214.54-.275.72v.001l.575.575zm-4.973 3.04.007-.005zm3.582-3.043.002.001h-.002z"/>
+              </svg>
+			<h3>Arts and Illustration</h3>
+			<p>Products used: Photoshop, and Illustrator for graphics and vectors.</p>
+			
+			<div class="dropdown">
+				<button class="dropbtn">PRICES</button>
+				<div class="dropdown-content">
+				<a href="#">Php 500 - 1,000 - A4 Digital art 1-3 days</a>
+				<a href="#">Php 1,000+ Portrait</a>
+				<a href="#">Php 1,000+ Branding Design</a>
+				</div>
+			  </div>
+			
+  </div>
+
+		<div class="box">
+			<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+				<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/>
+			  </svg>
+			<h3>2D and 3D Animation</h3>
+			<p>Products used: Toon Boom Harmony, Maya, Blender.</p>
+			
+			<div class="dropdown">
+				<button class="dropbtn">PRICES</button>
+				<div class="dropdown-content">
+				<a href="#">Php 5,000+ 30 seconds simple 2D animation 1 week</a>
+				<a href="#">Php 1,000 - 5,000 3D model </a>
+				<a href="#">Php 5,000+ 2D/3D animation complex more than 1 minute</a>
+				</div>
+			  </div>
+			
+        </div>
+	</div>
+
+</section>
+
+<!-----------Portfolio Section--------------->
+<section class="portfolio" id="portfolio">
+	<div class="main-text">
+		<h2><span>Latest </span>Project</h2>
+	</div>
+	<div class="slideshow-container">
+
+		<div class="mySlides fade">
+		 
+		  <img src="img/work7.png" style="width: 100%">
+		  
+		</div>
+		
+		<div class="mySlides fade">
+		  
+		  <img src="img/work10.png" style="width:100%">
+		  
+		</div>
+		
+		<div class="mySlides fade">
+		  
+		  <img src="img/work11.png" style="width:100%">
+		  
+		</div>
+
+		<div class="mySlides fade">
+			
+			<img src="img/work8.png" style="width:100%">
+			
+		  </div>
+
+		  <div class="mySlides fade">
+			
+			<img src="img/work9.png" style="width:100%">
+			
+		  </div>
+
+		  <div class="mySlides fade">
+			
+			<img src="img/work10.png" style="width:100%">
+			
+		  </div>
+
+		  <div class="mySlides fade">
+			
+			<img src="img/work11.png" style="width:100%">
+			
+		  </div>
+
+		  <div class="mySlides fade">
+			
+			<img src="img/work12.png" style="width:100%">
+			
+		  </div>
+
+		  <div class="mySlides fade">
+			
+			<img src="img/work13.png" style="width:100%">
+			
+		  </div>
+
+		  <div class="mySlides fade">
+			
+			<img src="img/work14.png" style="width:100%">
+			
+		  </div>
+
+		  <div class="mySlides fade">
+			
+			<img src="img/work15.png" style="width:100%">
+			
+		  </div>
+		  <div class="mySlides fade">
+			
+			<img src="img/work16.png" style="width:100%">
+			
+		  </div>
+
+		  <div class="mySlides fade">
+			
+			<img src="img/work17.png" style="width:100%">
+			
+		  </div>
+
+		  <div class="mySlides fade">
+			
+			<img src="img/work18.png" style="width:100%">
+			
+		  </div>
+
+		  <div class="mySlides fade">
+			
+			<img src="img/work19.png" style="width:100%">
+			
+		  </div>
+
+		  <div class="mySlides fade">
+			
+			<img src="img/work20.png" style="width:100%">
+			
+		  </div>
+
+		  <div class="mySlides fade">
+			
+			<img src="img/work21.png" style="width:100%">
+			
+		  </div>
+
+		  <div class="mySlides fade">
+			
+			<img src="img/work22.png" style="width:100%">
+			
+		  </div>
+		  <div class="mySlides fade">
+			
+			<img src="img/work23.png" style="width:100%">
+			
+		  </div>
+
+		  <div class="mySlides fade">
+			
+			<img src="img/work24.png" style="width:100%">
+			
+		  </div>
+
+		  <div class="mySlides fade">
+			
+			<img src="img/work25.png" style="width:100%">
+			
+		  </div>
+		
+		  
+		<a class="prev" onclick="plusSlides(-1)">❮</a>
+		<a class="next" onclick="plusSlides(1)">❯</a>
+		
+		</div>
+		<br>
+		
+		<div style="text-align:center">
+		  <span class="dot" onclick="currentSlide(1)"></span> 
+		  <span class="dot" onclick="currentSlide(2)"></span> 
+		  <span class="dot" onclick="currentSlide(3)"></span> 
+		  <span class="dot" onclick="currentSlide(4)"></span> 
+		  <span class="dot" onclick="currentSlide(5)"></span>
+		  <span class="dot" onclick="currentSlide(6)"></span>
+		  <span class="dot" onclick="currentSlide(7)"></span>
+		  <span class="dot" onclick="currentSlide(8)"></span>
+		  <span class="dot" onclick="currentSlide(9)"></span>
+		  <span class="dot" onclick="currentSlide(10)"></span>
+		  <span class="dot" onclick="currentSlide(11)"></span>
+		  <span class="dot" onclick="currentSlide(12)"></span>
+		  <span class="dot" onclick="currentSlide(13)"></span>
+		  <span class="dot" onclick="currentSlide(14)"></span>
+		  <span class="dot" onclick="currentSlide(15)"></span>
+		  <span class="dot" onclick="currentSlide(16)"></span>
+		  <span class="dot" onclick="currentSlide(17)"></span>
+		  <span class="dot" onclick="currentSlide(18)"></span>
+		  <span class="dot" onclick="currentSlide(19)"></span>
+		  <span class="dot" onclick="currentSlide(20)"></span>
+
+		  
+
+
+		</div>
+		
+		<script>
+		let slideIndex = 1;
+		showSlides(slideIndex);
+		
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+		
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+		
+		function showSlides(n) {
+		  let i;
+		  let slides = document.getElementsByClassName("mySlides");
+		  let dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+		  }
+		  for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		}
+		</script>
+
+	
+	
+
+
+
+</section>
+</body>
+
+</html>
