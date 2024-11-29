@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Website</title>
+    <style type="text/css">
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url(bg.png);
+            background-size: center; 
+            background-position: center; 
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+
+        }
+
+        .login-container {
+            width: 300px;
+              padding: 40px;
+              border-radius: 15px;
+             background-color: rgba(115, 113, 110, 0.963);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+           }
+
+        h1 {
+            color: #15100b;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+          input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background-color: #000000be;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #8a5a3a;
+          }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+
+        <h1>LOG IN</h1>
+
+        <form id="loginForm" onsubmit="login(); return false;">
+            <label for="username">Username</label>
+            <input type="text" id="username" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" required>
+
+            <button type="submit">Log In</button>
+        </form>
+    </div>
+    <script>
+        function login() {
+           
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === "admin" && password === "admin") {
+              
+                window.location.href = "home.html";
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
+
