@@ -124,7 +124,7 @@ nav a.active{
     border-bottom: 3px solid #b74b4b;
 }
 
-@media(max-width: 900px){
+.media(max-width: 900px){
     nav{
         position: absolute;
         display: none;
@@ -239,7 +239,7 @@ span{
 
 
 
-@keyframes words{
+.keyframes words{
     0%, 20%{
         content: "Graphic Artist";
     }
